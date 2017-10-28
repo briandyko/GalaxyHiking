@@ -9,80 +9,82 @@
 <div>
     <h4>Review</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+
+        <h2>
+        @Html.DisplayNameFor(model => model.Author)
+        </h2>
+
+        <h2>
+        @Html.DisplayFor(model => model.Author)
+        </h2>
+
+        <p>
             @Html.DisplayNameFor(model => model.Category.Rating)
-        </dt>
+        </p>
 
-        <dd>
+        <p>
             @Html.DisplayFor(model => model.Category.Rating)
-        </dd>
+        </p>
 
-        <dt>
+        <h3>
             @Html.DisplayNameFor(model => model.Galaxy)
-        </dt>
+        </h3>
 
-        <dd>
+        <h3>
             @Html.DisplayFor(model => model.Galaxy)
-        </dd>
+        </h3>
 
-        <dt>
+        <h4>
             @Html.DisplayNameFor(model => model.Planet)
-        </dt>
+        </h4>
 
-        <dd>
+        <h4>
             @Html.DisplayFor(model => model.Planet)
-        </dd>
+        </h4>
 
-        <dt>
+        <h6>
             @Html.DisplayNameFor(model => model.PlanetType)
-        </dt>
+        </h6>
 
-        <dd>
+        <h6>
             @Html.DisplayFor(model => model.PlanetType)
-        </dd>
+        </h6>
 
-        <dt>
+        <h5>
             @Html.DisplayNameFor(model => model.AlienEncounters)
-        </dt>
+        </h5>
 
-        <dd>
+        <h5>
             @Html.DisplayFor(model => model.AlienEncounters)
-        </dd>
+        </h5>
 
-        <dt>
+        <p>
             @Html.DisplayNameFor(model => model.IsFriendly)
-        </dt>
+        </p>
 
-        <dd>
+        <p>
             @Html.DisplayFor(model => model.IsFriendly)
-        </dd>
+        </p>
 
-        <dt>
+        <h4>
             @Html.DisplayNameFor(model => model.Comments)
-        </dt>
+        </h4>
 
-        <dd>
+        <h4>
             @Html.DisplayFor(model => model.Comments)
-        </dd>
+        </h4>
 
-        <dt>
+        <p>
             @Html.DisplayNameFor(model => model.PostDate)
-        </dt>
+        </p>
 
-        <dd>
+        <p>
             @Html.DisplayFor(model => model.PostDate)
-        </dd>
+        </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Author)
-        </dt>
+       
 
-        <dd>
-            @Html.DisplayFor(model => model.Author)
-        </dd>
 
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
