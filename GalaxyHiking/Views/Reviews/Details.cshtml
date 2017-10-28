@@ -1,0 +1,90 @@
+﻿@model GalaxyHiking.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Galaxy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Galaxy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Planet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Planet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanetType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanetType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlienEncounters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlienEncounters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFriendly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFriendly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
