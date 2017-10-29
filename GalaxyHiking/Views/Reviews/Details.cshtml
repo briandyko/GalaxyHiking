@@ -4,89 +4,62 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+    <h2>Details</h2>
 
-<div>
-    <h4>Review</h4>
-    <hr />
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Review</h4>
+            <hr />
 
-        <h2>
-        @Html.DisplayNameFor(model => model.Author)
-        </h2>
+            <h5 id="authorInfo">
+                @Html.DisplayNameFor(model => model.Author) : @Html.DisplayFor(model => model.Author)
+            </h5>
 
-        <h2>
-        @Html.DisplayFor(model => model.Author)
-        </h2>
+            <h6 id="superTiny">
+                --@Html.DisplayFor(model => model.PostDate)--
+            </h6>
 
-        <p>
-            @Html.DisplayNameFor(model => model.Category.Rating)
-        </p>
+            <p id="review">
+                @Html.DisplayNameFor(model => model.Category.Rating) : @Html.DisplayFor(model => model.Category.Rating)
+            </p>
 
-        <p>
-            @Html.DisplayFor(model => model.Category.Rating)
-        </p>
+        </div>
 
-        <h3>
-            @Html.DisplayNameFor(model => model.Galaxy)
-        </h3>
+            <div class="col-sm-6">
 
-        <h3>
-            @Html.DisplayFor(model => model.Galaxy)
-        </h3>
+                <h3>
+                    @Html.DisplayNameFor(model => model.Galaxy) : @Html.DisplayFor(model => model.Galaxy)
+                </h3>
 
-        <h4>
-            @Html.DisplayNameFor(model => model.Planet)
-        </h4>
+                <h4>
+                    @Html.DisplayNameFor(model => model.Planet) ((@Html.DisplayFor(model => model.Planet)))
+                </h4>
 
-        <h4>
-            @Html.DisplayFor(model => model.Planet)
-        </h4>
+                <h6>
+                    @Html.DisplayNameFor(model => model.PlanetType) : @Html.DisplayFor(model => model.PlanetType)
+                </h6>
 
-        <h6>
-            @Html.DisplayNameFor(model => model.PlanetType)
-        </h6>
+                <h5>
+                    @Html.DisplayNameFor(model => model.AlienEncounters) : @Html.DisplayFor(model => model.AlienEncounters)
+                </h5>
 
-        <h6>
-            @Html.DisplayFor(model => model.PlanetType)
-        </h6>
+                <h5>
+                    @Html.DisplayNameFor(model => model.IsFriendly) @Html.DisplayFor(model => model.IsFriendly)
+                </h5>
 
-        <h5>
-            @Html.DisplayNameFor(model => model.AlienEncounters)
-        </h5>
+                <h4 style="font-weight:800">
+                    @Html.DisplayNameFor(model => model.Comments)
+                </h4>
 
-        <h5>
-            @Html.DisplayFor(model => model.AlienEncounters)
-        </h5>
+                <p>
+                    @Html.DisplayFor(model => model.Comments)
+                </p>
 
-        <p>
-            @Html.DisplayNameFor(model => model.IsFriendly)
-        </p>
+            </div>
 
-        <p>
-            @Html.DisplayFor(model => model.IsFriendly)
-        </p>
+        </div>
 
-        <h4>
-            @Html.DisplayNameFor(model => model.Comments)
-        </h4>
-
-        <h4>
-            @Html.DisplayFor(model => model.Comments)
-        </h4>
-
-        <p>
-            @Html.DisplayNameFor(model => model.PostDate)
-        </p>
-
-        <p>
-            @Html.DisplayFor(model => model.PostDate)
-        </p>
-
-       
-
-
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

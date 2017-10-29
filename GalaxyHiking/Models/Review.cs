@@ -13,6 +13,7 @@ namespace GalaxyHiking.Models
         public int ReviewID { get; set; }
         public string Galaxy { get; set; }
         public string Planet { get; set; }
+        [Display (Name = "Primarily Composted of:")]
         public string PlanetType { get; set; }
         [Display(Name = "How many aliens did you see?")]
         public int AlienEncounters { get; set; }

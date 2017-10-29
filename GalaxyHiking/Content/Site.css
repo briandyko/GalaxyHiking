@@ -22,3 +22,32 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Homepage*/
+
+/*Jumbotron*/
+.hubble {  
+    background-image: url('hubble background.jpg');
+    color:whitesmoke;
+}
+
+
+/*Review Details*/
+
+/*Author*/
+
+h5#authorInfo {
+   font-weight:900;
+   color:blue;
+}
+
+/*Date Posted*/
+
+h6#superTiny {
+    font-size:xx-small;
+}
+
+p#review{
+    color:darkgoldenrod;
+}
+
