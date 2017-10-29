@@ -32,6 +32,14 @@ textarea {
 }
 
 
+/*Review Index*/
+
+/*Galaxy*/
+
+.centerText{
+    text-align:center;
+}
+
 /*Review Details*/
 
 /*Author*/
@@ -49,5 +57,9 @@ h6#superTiny {
 
 p#review{
     color:darkgoldenrod;
+}
+
+.boxed {
+    border: 1px solid green;
 }
 
