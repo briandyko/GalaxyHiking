@@ -10,6 +10,7 @@ namespace GalaxyHiking.Models
     {
         [Key]
         public int CategoryID { get; set; }
+        [Display (Name = "Official Galaxy Hike Rating")]
         public string Rating { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }

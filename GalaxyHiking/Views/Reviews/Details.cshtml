@@ -4,30 +4,62 @@
     ViewBag.Title = "Details";
 }
 
-    <h2>Details</h2>
+    <h2 id="detailsFont">Details</h2>
 
     <div class="row">
-        <div class="col-sm-5">
-            <h4>Review</h4>
+        <div class="col-sm-5 centerText">
+            <h4 id="reviewFont">Review</h4>
             <hr />
 
             <h5 id="authorInfo">
-                @Html.DisplayNameFor(model => model.Author) : @Html.DisplayFor(model => model.Author)
+                @*@Html.DisplayNameFor(model => model.Author)*@ <span class="glyphicon glyphicon-user" aria-hidden="true"></span> @Html.DisplayFor(model => model.Author)
             </h5>
 
             <h6 id="superTiny">
                 --@Html.DisplayFor(model => model.PostDate)--
             </h6>
 
-            <p id="review">
-                @Html.DisplayNameFor(model => model.Category.Rating) : @Html.DisplayFor(model => model.Category.Rating)
+            <p id="ratingHead">
+                @Html.DisplayNameFor(model => model.Category.Rating):
             </p>
+
+            <p>
+                "@Html.DisplayFor(model => model.Category.Rating)"
+            </p>
+
+            @{
+                if (Model.CategoryID == 1)
+                {
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                    </span>
+                }
+                else if (Model.CategoryID == 2)
+                {
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star-empty"></i>
+                        <i class="glyphicon glyphicon-star-empty"></i>
+                    </span>
+                }
+                else if (Model.CategoryID == 3)
+                {
+                    <span class="icon-stack">
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star"></i>
+                        <i class="glyphicon glyphicon-star-empty"></i>
+                    </span>
+                }
+
+            }
 
         </div>
 
             <div class="col-sm-7 boxed">
 
-                <h3>
+                <h3 class="galaxy">
                     @Html.DisplayNameFor(model => model.Galaxy) : @Html.DisplayFor(model => model.Galaxy)
                 </h3>
 
@@ -47,9 +79,9 @@
                     @Html.DisplayNameFor(model => model.IsFriendly) @Html.DisplayFor(model => model.IsFriendly)
                 </h5>
 
-                <h4 style="font-weight:800">
+                <h3>
                     @Html.DisplayNameFor(model => model.Comments)
-                </h4>
+                </h3>
 
                 <p>
                     @Html.DisplayFor(model => model.Comments)

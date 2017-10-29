@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 id="indexFont">Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -14,11 +14,11 @@
     @foreach (var item in Model)
     {
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail boxed">
                 @*<img src="..." alt="...">*@
                 <div class="caption centerText">
-                    <h3>@Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(modelItem => item.Galaxy)</h3>
-                    <h6>@Html.DisplayNameFor(model => model.Author): @Html.DisplayFor(modelItem => item.Author)</h6>
+                    <h3 class="galaxy">@Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(modelItem => item.Galaxy)</h3>
+                    <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> @*@Html.DisplayNameFor(model => model.Author):*@ @Html.DisplayFor(modelItem => item.Author)</h6>
                     @*<h2>@Html.DisplayNameFor(model => model.Planet): @Html.DisplayFor(modelItem => item.Planet) (@Html.DisplayFor(modelItem => item.PlanetType) planet)  </h2>*@
                     <p>"@Html.DisplayFor(modelItem => item.Comments)"</p>
                     <p>@Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" })</p>

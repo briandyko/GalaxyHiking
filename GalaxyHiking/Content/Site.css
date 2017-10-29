@@ -34,13 +34,41 @@ textarea {
 
 /*Review Index*/
 
+#indexFont{
+    font-family: 'Iceland', cursive;
+}
+
 /*Galaxy*/
 
 .centerText{
     text-align:center;
 }
 
+/*For Galaxy heading*/
+
+h3.galaxy{
+    font-family: 'Bungee Outline', cursive;
+    font-weight:900;
+}
+
+/*Comments*/
+
+p {
+    font-family: 'VT323', monospace;
+    font-size:22px;
+}
+
+
 /*Review Details*/
+
+#detailsFont{
+    font-family: 'Wallpoet', cursive;
+}
+
+#reviewFont{
+    font-family: 'Wallpoet', cursive;
+    font-weight:600;
+}
 
 /*Author*/
 
@@ -49,17 +77,26 @@ h5#authorInfo {
    color:blue;
 }
 
+
 /*Date Posted*/
 
 h6#superTiny {
     font-size:xx-small;
 }
 
-p#review{
-    color:darkgoldenrod;
+/*Rating Head*/
+
+#ratingHead{
+    text-decoration:underline;
 }
 
 .boxed {
     border: 1px solid green;
 }
 
+/*Comments*/
+
+h3{
+    font-family: 'Geostar Fill', cursive;
+    font-weight:700;
+}
