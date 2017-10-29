@@ -15,7 +15,7 @@ namespace GalaxyHiking.Models
         public string Planet { get; set; }
         [Display (Name = "Primarily Composted of:")]
         public string PlanetType { get; set; }
-        [Display(Name = "How many aliens did you see?")]
+        [Display(Name = "How many aliens did you see? ")]
         public int AlienEncounters { get; set; }
         [Display(Name = "Please check if the aliens were friendly")]
         public bool IsFriendly { get; set; }

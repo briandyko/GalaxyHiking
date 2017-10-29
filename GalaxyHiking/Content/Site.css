@@ -44,9 +44,9 @@ textarea {
     text-align:center;
 }
 
-/*For Galaxy heading*/
+/*For Galaxy heading (index and details)*/
 
-h3.galaxy{
+.galaxy{
     font-family: 'Bungee Outline', cursive;
     font-weight:900;
 }
@@ -93,6 +93,34 @@ h6#superTiny {
 .boxed {
     border: 1px solid green;
 }
+
+/*Planet Name*/
+
+#planet {
+    font-family: 'Wallpoet', cursive;
+}
+
+/*Planet Composed Of*/
+
+#composedOf {
+    color:darkolivegreen;
+    font-family: 'Iceland', cursive;
+    font-size:14px;
+}
+
+/*How Many Aliens?*/
+
+#alienNum {
+    font-family: 'Geostar', cursive;
+    font-weight:600;
+}
+
+/*Were The Aliens Friendly?*/
+
+#friendly {
+    font-family: 'Wallpoet', cursive;
+}
+
 
 /*Comments*/
 

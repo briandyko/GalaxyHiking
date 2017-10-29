@@ -59,23 +59,23 @@
 
             <div class="col-sm-7 boxed">
 
-                <h3 class="galaxy">
-                    @Html.DisplayNameFor(model => model.Galaxy) : @Html.DisplayFor(model => model.Galaxy)
-                </h3>
+                <h2 class="galaxy">
+                    @Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(model => model.Galaxy)
+                </h2>
 
-                <h4>
+                <h4 id="planet">
                     @Html.DisplayNameFor(model => model.Planet) ((@Html.DisplayFor(model => model.Planet)))
                 </h4>
 
-                <h6>
-                    @Html.DisplayNameFor(model => model.PlanetType) : @Html.DisplayFor(model => model.PlanetType)
+                <h6 id="composedOf">
+                    @Html.DisplayNameFor(model => model.PlanetType) @Html.DisplayFor(model => model.PlanetType)
                 </h6>
 
-                <h5>
-                    @Html.DisplayNameFor(model => model.AlienEncounters) : @Html.DisplayFor(model => model.AlienEncounters)
+                <h5 id="alienNum">
+                    @Html.DisplayNameFor(model => model.AlienEncounters) @Html.DisplayFor(model => model.AlienEncounters)
                 </h5>
 
-                <h5>
+                <h5 id="friendly">
                     @Html.DisplayNameFor(model => model.IsFriendly) @Html.DisplayFor(model => model.IsFriendly)
                 </h5>
 
