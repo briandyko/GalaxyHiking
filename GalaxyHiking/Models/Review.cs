@@ -9,6 +9,8 @@ namespace GalaxyHiking.Models
 {
     public class Review
     {
+        //Review Fields
+
         [Key]
         public int ReviewID { get; set; }
         public string Galaxy { get; set; }
@@ -23,6 +25,8 @@ namespace GalaxyHiking.Models
         public string Comments { get; set; }
         public DateTime PostDate { get; set; }
         public string Author { get; set; }
+
+        //Foreign Key Setup
 
         [ForeignKey("Category")]
         public int CategoryID { get; set; }

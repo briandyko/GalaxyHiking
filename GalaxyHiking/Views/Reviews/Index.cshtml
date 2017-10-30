@@ -10,22 +10,19 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+@*Foreach loop to populate Index with Galaxy info, user info, comments section, and button leading to Details section*@
+
 <div class="row">
     @foreach (var item in Model)
     {
         <div class="col-sm-6 col-md-4">
-            <div class="thumbnail boxed">
-                @*<img src="..." alt="...">*@
+            <div class="thumbnail boxed hubble">
                 <div class="caption centerText">
-                    <h3 class="galaxy">@Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(modelItem => item.Galaxy)</h3>
-                    <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> @*@Html.DisplayNameFor(model => model.Author):*@ @Html.DisplayFor(modelItem => item.Author)</h6>
-                    @*<h2>@Html.DisplayNameFor(model => model.Planet): @Html.DisplayFor(modelItem => item.Planet) (@Html.DisplayFor(modelItem => item.PlanetType) planet)  </h2>*@
-                    <p>"@Html.DisplayFor(modelItem => item.Comments)"</p>
+                    <h3 class="galaxy whiteText">@Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(modelItem => item.Galaxy)</h3>
+                    <h6 class="author whiteText"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> @Html.DisplayFor(modelItem => item.Author)</h6>
+                    <p class="whiteText">"@Html.DisplayFor(modelItem => item.Comments)"</p>
                     <p>@Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" })</p>
-                    @*<h5>@Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID })</h5>*@
-                    @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
+
                 </div>
             </div>
         </div>
@@ -35,73 +32,5 @@
 
 
 
-
-    @*<tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Rating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Galaxy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Planet)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlanetType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AlienEncounters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsFriendly)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Comments)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PostDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Author)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Galaxy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Planet)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlanetType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AlienEncounters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsFriendly)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PostDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
-}*@
 
 

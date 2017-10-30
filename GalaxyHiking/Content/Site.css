@@ -31,6 +31,39 @@ textarea {
     color:whitesmoke;
 }
 
+div.jumbotron.hubble{
+    margin-bottom:0px;
+    border-radius:0px;
+}
+
+/*Headings for each section*/
+
+.titles{
+    font-family: 'Wallpoet', cursive;
+    text-align:center;
+    color:whitesmoke;
+}
+
+/*button Styling*/
+
+a.btn.btn-default{
+    background-color:black;
+    border-color:green;
+    color:whitesmoke;
+}
+
+/*Space b/g for the row*/
+
+.cosmicBackground {
+    background-image: url('orion.jpg');
+}
+
+/*for white text*/
+
+.whiteText{
+    color:whitesmoke;
+}
+
 
 /*Review Index*/
 
@@ -58,6 +91,13 @@ p {
     font-size:22px;
 }
 
+/*Details Button*/
+
+a.btn.btn-primary{
+    background-color:black;
+    border-color:green;
+}
+
 
 /*Review Details*/
 
@@ -72,7 +112,7 @@ p {
 
 /*Author*/
 
-h5#authorInfo {
+.author {
    font-weight:900;
    color:blue;
 }
@@ -89,6 +129,8 @@ h6#superTiny {
 #ratingHead{
     text-decoration:underline;
 }
+
+/*Right Column outline*/
 
 .boxed {
     border: 1px solid green;
@@ -137,11 +179,13 @@ img#andromeda{
 }
 
 img#virgo{
-
+    width:500px;
+    height:300px;
 }
 
 img#milkyWay{
-
+    width:500px;
+    height:300px;
 }
 
 img#magenellic{

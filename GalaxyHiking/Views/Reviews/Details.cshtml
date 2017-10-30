@@ -4,124 +4,128 @@
     ViewBag.Title = "Details";
 }
 
-    <h2 id="detailsFont">Details</h2>
+<h2 id="detailsFont">Details</h2>
 
-    <div class="row">
-        <div class="col-sm-5 centerText">
-            <h4 id="reviewFont">Review</h4>
-            <hr />
+<div class="row">
 
-            <h5 id="authorInfo">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> @Html.DisplayFor(model => model.Author)
-            </h5>
+    @*Column for author info, postdate, planet info, and official galaxy hike rating*@
 
-            <h6 id="superTiny">
-                --@Html.DisplayFor(model => model.PostDate)--
-            </h6>
+    <div class="col-sm-5 centerText">
+        <h4 id="reviewFont">Review</h4>
+        <hr />
 
-            <h4 id="planet">
-                @Html.DisplayNameFor(model => model.Planet) ((@Html.DisplayFor(model => model.Planet)))
-            </h4>
+        <h5 class="author">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> @Html.DisplayFor(model => model.Author)
+        </h5>
 
-            <h6 id="composedOf">
-                @Html.DisplayNameFor(model => model.PlanetType) @Html.DisplayFor(model => model.PlanetType)
-            </h6>
+        <h6 id="superTiny">
+            --@Html.DisplayFor(model => model.PostDate)--
+        </h6>
+
+        <h4 id="planet">
+            @Html.DisplayNameFor(model => model.Planet) ((@Html.DisplayFor(model => model.Planet)))
+        </h4>
+
+        <h6 id="composedOf">
+            @Html.DisplayNameFor(model => model.PlanetType) @Html.DisplayFor(model => model.PlanetType)
+        </h6>
 
 
-            <p id="ratingHead">
-                @Html.DisplayNameFor(model => model.Category.Rating):
-            </p>
+        <p id="ratingHead">
+            @Html.DisplayNameFor(model => model.Category.Rating):
+        </p>
 
-            <p>
-                "@Html.DisplayFor(model => model.Category.Rating)"
-            </p>
+        <p>
+            "@Html.DisplayFor(model => model.Category.Rating)"
+        </p>
 
- 
-          
-        
+    </div>
 
-        </div>
+    @*Column for Galaxy info, star rating system, comments, picture of galaxies, and alien info*@
 
-            <div class="col-sm-7 boxed centerText">
+    <div class="col-sm-7 boxed centerText">
 
-                <h2 class="galaxy">
-                    @Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(model => model.Galaxy)
-                </h2>
+        <h2 class="galaxy">
+            @Html.DisplayNameFor(model => model.Galaxy): @Html.DisplayFor(model => model.Galaxy)
+        </h2>
 
-                @{
-                    if (Model.CategoryID == 1)
-                    {
-                        <span class="icon-stack">
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i> 
-                        </span>
-                    }
-                    else if (Model.CategoryID == 2)
-                    {
-                        <span class="icon-stack">
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    }
-                    else if (Model.CategoryID == 3)
-                    {
-                        <span class="icon-stack">
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star"></i>
-                            <i class="glyphicon glyphicon-star-empty"></i>
-                        </span>
-                    }
+        @*Star Rating System*@
 
-                }
+        @{
+            if (Model.CategoryID == 1)
+            {
+                <span class="icon-stack">
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                </span>
+            }
+            else if (Model.CategoryID == 2)
+            {
+                <span class="icon-stack">
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star-empty"></i>
+                    <i class="glyphicon glyphicon-star-empty"></i>
+                </span>
+            }
+            else if (Model.CategoryID == 3)
+            {
+                <span class="icon-stack">
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star"></i>
+                    <i class="glyphicon glyphicon-star-empty"></i>
+                </span>
+            }
 
-               
+        }
 
-                <h3>
-                    @Html.DisplayNameFor(model => model.Comments)
-                </h3>
+        <h3>
+            @Html.DisplayNameFor(model => model.Comments)
+        </h3>
 
-                <p>
-                    @Html.DisplayFor(model => model.Comments)
-                </p>
+        <p>
+            @Html.DisplayFor(model => model.Comments)
+        </p>
 
-                   @{
-                    if (Model.ReviewID == 1)
-                    {
-                    <img id="andromeda" src="~/Content/Andromeda.jpg" />
-                    }
-                    else if (Model.ReviewID == 2)
-                    {
-                    <img src="~/Content/isvirgo.jpg" />
-                    }
-                    else if (Model.ReviewID == 3)
-                    {
-                    <img src="~/Content/jupiter.jpg" />
-                    }
-                    else if (Model.ReviewID == 4)
-                    {
-                    <img id="magenellic" src="~/Content/magenellic cloud.jpg" />
-                    }
-                    else if (Model.ReviewID == 5)
-                    {
-                    <img id="orion" src="~/Content/orion.jpg" />
-                    }
-                }
+        @*To Populate the Pictures*@
 
-                <h5 id="alienNum">
-                    @Html.DisplayNameFor(model => model.AlienEncounters) @Html.DisplayFor(model => model.AlienEncounters)
-                </h5>
+        @{
+            if (Model.ReviewID == 1)
+            {
+                <img id="andromeda" src="~/Content/Andromeda.jpg" />
+            }
+            else if (Model.ReviewID == 2)
+            {
+                <img id="virgo" src="~/Content/isvirgo.jpg" />
+            }
+            else if (Model.ReviewID == 3)
+            {
+                <img id="milkyWay" src="~/Content/jupiter.jpg" />
+            }
+            else if (Model.ReviewID == 4)
+            {
+                <img id="magenellic" src="~/Content/magenellic cloud.jpg" />
+            }
+            else if (Model.ReviewID == 5)
+            {
+                <img id="orion" src="~/Content/orion.jpg" />
+            }
+        }
 
-                <h5 id="friendly">
-                    @Html.DisplayNameFor(model => model.IsFriendly) @Html.DisplayFor(model => model.IsFriendly)
-                </h5>
+        <h5 id="alienNum">
+            @Html.DisplayNameFor(model => model.AlienEncounters) @Html.DisplayFor(model => model.AlienEncounters)
+        </h5>
 
-            </div>
+        <h5 id="friendly">
+            @Html.DisplayNameFor(model => model.IsFriendly) @Html.DisplayFor(model => model.IsFriendly)
+        </h5>
 
-        </div>
+    </div>
 
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ReviewID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

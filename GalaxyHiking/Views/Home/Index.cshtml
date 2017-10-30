@@ -2,28 +2,30 @@
     ViewBag.Title = "Hiking in Other Galaxies!!!";
 }
 
-<div class="jumbotron hubble">
-    <h1>HIKING IN OTHER GALAXIES</h1>
-    <p class="lead">It is now the 23rd century. Using partricle transmission developed by Brian J Dyko, it is quite easy to travel to other galaxies to take a hike.</p>
-    <p><a href="http://cosmology.berkeley.edu/Education/CosmologyEssays/The_Cosmic_Microwave_Background.html" class="btn btn-primary btn-lg">Our Universe &raquo;</a></p>
-</div>
+@*Jumbotron*@
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Reviews</h2>
-        <p>
-            Check out all the reviews of all our locations. It's like super cool man.
-        </p>
-        <p><a class="btn btn-default" href="http://localhost:54139/Reviews">Learn more &raquo;</a></p>
+    <div class="jumbotron hubble">
+        <h1 class="titles">HIKING IN OTHER GALAXIES</h1>
+        <p class="lead centerText">It is now the 23rd century. Using partricle transmission developed by Brian J Dyko, it is quite easy to travel to other galaxies to take a hike.</p>
+        <p class="centerText"><a href="http://cosmology.berkeley.edu/Education/CosmologyEssays/The_Cosmic_Microwave_Background.html" class="btn btn-primary btn-lg">Our Universe &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Categories</h2>
-        <p>If you're unsatisfied with our current ratings system, make your own with our outtasight database manipulation tool!</p>
-        <p><a class="btn btn-default" href="http://localhost:54139/Categories">Learn more &raquo;</a></p>
+
+@*Each section of the galaxy hike site*@
+
+    <div class="row cosmicBackground">
+        <div class="col-md-4 boxed">
+            <h2 class="titles">REVIEWS</h2>
+            <p class="whiteText">Check out the reviews of all our locations. Our hikers have been all across the universe!!!</p>         
+            <p class="centerText"><a class="btn btn-default" href="http://localhost:54139/Reviews">Our Reviews &raquo;</a></p>
+        </div>
+        <div class="col-md-4 boxed">
+            <h2 class="titles">CATEGORIES</h2>
+            <p class="whiteText">If you're unsatisfied with our current ratings system, make your own with our outtasight database manipulation tool!</p>
+            <p class="centerText"><a class="btn btn-default" href="http://localhost:54139/Categories">Design Your Own! &raquo;</a></p>
+        </div>
+        <div class="col-md-4 boxed">
+            <h2 class="titles">WE LOVE SPACE SO MUCH!!!</h2>
+            <p class="whiteText">If you click on the button below, you will be instantly transported!</p>
+            <p class="centerText"><a class="btn btn-default" href="https://apod.nasa.gov/apod/random_apod.html">Magic Button &raquo;</a></p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>We love space so much!!!</h2>
-        <p>For random info about space and stuff...</p>
-        <p><a class="btn btn-default" href="https://apod.nasa.gov/apod/random_apod.html">Learn more &raquo;</a></p>
-    </div>
-</div>
