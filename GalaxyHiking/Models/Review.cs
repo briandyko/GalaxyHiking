@@ -19,6 +19,7 @@ namespace GalaxyHiking.Models
         public int AlienEncounters { get; set; }
         [Display(Name = "Please check if the aliens were friendly")]
         public bool IsFriendly { get; set; }
+        [Display(Name = "Hiker's Thoughts")]
         public string Comments { get; set; }
         public DateTime PostDate { get; set; }
         public string Author { get; set; }

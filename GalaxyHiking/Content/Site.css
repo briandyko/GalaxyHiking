@@ -128,3 +128,28 @@ h3{
     font-family: 'Geostar Fill', cursive;
     font-weight:700;
 }
+
+/*Formatting Pictures in each Review Detail*/
+
+img#andromeda{
+    width:500px;
+    height:300px;
+}
+
+img#virgo{
+
+}
+
+img#milkyWay{
+
+}
+
+img#magenellic{
+    width:500px;
+    height:300px;
+}
+
+img#orion{
+    width:500px;
+    height:300px;
+}
